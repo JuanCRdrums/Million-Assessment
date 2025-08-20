@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate", "RealEstate.csproj", "{ECD7CC4A-C5A2-47E6-B3CC-8CF700C3E2C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.Test", "..\RealEstate.Test\RealEstate.Test.csproj", "{5F917AAD-BF74-4F54-B015-AAD81194EF83}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ECD7CC4A-C5A2-47E6-B3CC-8CF700C3E2C0} = {ECD7CC4A-C5A2-47E6-B3CC-8CF700C3E2C0}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECD7CC4A-C5A2-47E6-B3CC-8CF700C3E2C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD7CC4A-C5A2-47E6-B3CC-8CF700C3E2C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD7CC4A-C5A2-47E6-B3CC-8CF700C3E2C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD7CC4A-C5A2-47E6-B3CC-8CF700C3E2C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F917AAD-BF74-4F54-B015-AAD81194EF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F917AAD-BF74-4F54-B015-AAD81194EF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F917AAD-BF74-4F54-B015-AAD81194EF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F917AAD-BF74-4F54-B015-AAD81194EF83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54EF7E28-25E9-4092-877D-702F3AF781B7}
+	EndGlobalSection
+EndGlobal

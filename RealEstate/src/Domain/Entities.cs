@@ -28,7 +28,9 @@ public sealed class PropertyTrace
 
 public sealed class Property
 {
-    [BsonId] public ObjectId Id { get; set; } = ObjectId.GenerateNewId();
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public string Address { get; set; } = string.Empty;
     public decimal Price { get; set; }

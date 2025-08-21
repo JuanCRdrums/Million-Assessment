@@ -10,7 +10,7 @@ public sealed record OwnerDto(ObjectId Id,
     DateTime? Birthday);
 
 public sealed record PropertyWithOwnerDto(
-    ObjectId Id,
+    string Id,
     string Name,
     string Address,
     decimal Price,

@@ -83,9 +83,9 @@ public sealed class PropertyReadRepository : IPropertyReadRepository
 
     public async Task<PropertyWithOwnerDto?> GetByIdAsync(string id, CancellationToken ct)
     {
-        var objectId = ObjectId.Parse(id);
+        //var objectId = ObjectId.Parse(id);
         var doc = await _ctx.Properties.Aggregate()
-            .Match(p => p.Id == objectId)
+            .Match(p => p.Id == id)
             .Lookup("owners", "OwnerId", "_id", "ownerArr")
             .Unwind("ownerArr", new AggregateUnwindOptions<BsonDocument> { PreserveNullAndEmptyArrays = true })
             .Project(BuildProjection())
@@ -98,7 +98,7 @@ public sealed class PropertyReadRepository : IPropertyReadRepository
     private static ProjectionDefinition<BsonDocument, BsonDocument> BuildProjection() =>
     Builders<BsonDocument>.Projection.Expression(doc => new BsonDocument
     {
-        { "Id",  doc["Id"] },
+        { "_id",  doc["_id"].ToString() },
         { "Name", doc["Name"] },
         { "Address", doc["Address"] },
         { "Price", doc["Price"] },

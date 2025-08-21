@@ -35,7 +35,6 @@ public sealed class DataSeeder: IDataSeeder
 
         var p1 = new Property
         {
-            Id = ObjectId.GenerateNewId(),
             Name = "House #12",
             Address = "123 Main St",
             Price = 150000,
@@ -48,7 +47,6 @@ public sealed class DataSeeder: IDataSeeder
 
         var p2 = new Property
         {
-            Id = ObjectId.GenerateNewId(),
             Name = "Lake Cottage",
             Address = "9 Lake Rd",
             Price = 230000,

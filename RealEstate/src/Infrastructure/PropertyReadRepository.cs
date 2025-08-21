@@ -39,7 +39,7 @@ public sealed class PropertyReadRepository : IPropertyReadRepository
         {
             filters.Add(builder.Gte(p => p.Price, filter.MinPrice.Value));
         }
-        if (filter.MaxPrice.HasValue)
+        if (filter.MaxPrice.HasValue && filter.MaxPrice.Value > 0)
         {
             filters.Add(builder.Lte(p => p.Price, filter.MaxPrice.Value));
         }
